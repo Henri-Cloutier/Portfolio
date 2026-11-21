@@ -1,65 +1,67 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.2.
+Portfolio personnel développé avec Angular.
 
-## Development server
+## Technologies utilisées
 
-To start a local development server, run:
+- Angular 22
+- TypeScript
+- Tailwind CSS
+- RxJS
+- Docker
 
-```bash
-ng serve
-```
+## Prérequis
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Node.js 24 ou plus récent
+- npm 11 ou plus récent
+- Docker et Docker Compose (facultatif)
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Installation locale
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+## Lancement
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+L'application est ensuite disponible à l'adresse <http://localhost:4200>.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Commandes disponibles
 
 ```bash
-ng test
+npm start       # Lance le serveur de développement
+npm run build   # Génère une version de production
+npm test        # Exécute les tests
+npm run watch   # Compile en continu
 ```
 
-## Running end-to-end tests
+## Lancement avec Docker
 
-For end-to-end (e2e) testing, run:
+Depuis le dossier parent contenant le fichier `docker-compose.yml` :
 
 ```bash
-ng e2e
+docker compose up --build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Structure du projet
 
-## Additional Resources
+```text
+src/
+  app/       # Composants, pages et routes Angular
+  public/    # Ressources publiques
+  styles.css # Styles globaux
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Auteur
 
-## Used colors
+Henri Cloutier
 
-01161E
-508484
-FFFFF2
+## Palette de couleurs
+
+- `#01161E`
+- `#508484`
+- `#FFFFF2`
