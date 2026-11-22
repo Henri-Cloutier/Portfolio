@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <nav>
       <div>
-        <a class="brand" href="#accueil" aria-label="Accueil du portfolio">HC</a>
+        <a class="brand" href="/home" aria-label="Accueil du portfolio">HC</a>
         <ul class="nav-list">
           <a href="projects">Projets</a>
           <a href="skills">Compétences</a>
-          <a href="contactme">Me contacter</a>
+          <a href="contact-me">Me contacter</a>
         </ul>
       </div>
     </nav>
