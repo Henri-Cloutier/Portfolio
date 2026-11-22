@@ -4,79 +4,89 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-navbar',
   template: `
     <nav>
-      <a href="#">Inventaire</a>
-      <ul class="nav-list">
-        <li class="nav-item dropdown">
-          <a href="management/dashboard">Projets</a>
-          <ul class="dropdown-menu">
-            <li><a href="projects/inventaire">Inventaire</a></li>
-          </ul>
-        </li>
-      </ul>
+      <div>
+        <a class="brand" href="#accueil" aria-label="Accueil du portfolio">HC</a>
+        <ul class="nav-list">
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   `,
   styles: `
+    :host {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: block;
+      width: 100%;
+      background: #FFFFF2;
+      border-bottom: 1px solid #508484;
+    }
+
     nav {
-      display: flex;
-      padding: 15px;
+      width: 100%;
+    }
+
+    nav > div {
+      display: grid;
+      grid-template-columns: max-content auto;
+      min-height: 72px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
       align-items: center;
-      background-color: #01161e;
-      color: #fffff2;
+      color: #01161E;
+    }
+
+    .brand {
+      color: #01161E;
+      font-size: 1.15rem;
+      font-weight: 850;
+      letter-spacing: -0.06em;
+      text-decoration: none;
     }
     .nav-list {
       display: flex;
+      align-items: center;
+      gap: 8px;
       list-style: none;
-      margin: 0;
       padding: 0;
       margin-left: auto;
     }
 
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-item a {
+    .nav-list a {
       display: block;
-      padding: 1rem 1.5rem;
+      border-radius: 999px;
+      padding: 10px 12px;
+      color: #01161e;
+      font-size: 0.92rem;
       text-decoration: none;
-      color: inherit;
+    }
+    .nav-list a:hover {
+      background: #508484;
+      color: #fffff2;
     }
 
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 180px;
-      list-style: none;
-      margin: 0;
-      padding: 0.5rem 0;
-      background: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border-radius: 4px;
-
-      /* hidden by default */
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-8px);
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .dropdown-menu li a {
-      padding: 0.5rem 1.25rem;
-      white-space: nowrap;
-    }
-
-    .dropdown-menu li a:hover {
-      background: #f5f5f5;
+    @media (max-width: 620px) {
+      nav > div {
+        min-height: 64px;
+        grid-template-columns: 42px minmax(0, 1fr);
+        padding: 0 18px;
+      }
+      .nav-list {
+        gap: 2px;
+      }
+      .nav-list li:nth-child(1),
+      .nav-list li:nth-child(2) {
+        display: none;
+      }
+      .nav-list a {
+        padding: 8px 7px;
+        font-size: 0.82rem;
+      }
     }
   `,
 })
