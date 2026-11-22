@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
       <div>
         <a class="brand" href="/home" aria-label="Accueil du portfolio">HC</a>
         <ul class="nav-list">
-          <li><a href="projects">Projets</a></li>
-          <li><a href="skills">Compétences</a></li>
-          <li><a href="contactme">Me contacter</a></li>
+          <a href="projects">Projets</a>
+          <a href="skills">Compétences</a>
+          <a href="contact-me">Me contacter</a>
         </ul>
       </div>
     </nav>
