@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'home-page',
+  selector: 'app-home',
   template: `
     <main>
       <section class="hero" id="accueil">
@@ -39,6 +39,7 @@ import { Component, OnInit } from '@angular/core';
           <a
             class="button button-primary"
             href="https://www.linkedin.com/in/henri-cloutier-85136b2a3/"
+            target="_blank"
           >
             Profil LinkedIn
           </a>
@@ -270,8 +271,4 @@ import { Component, OnInit } from '@angular/core';
     }
   `,
 })
-export class HomePage implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class HomePage {}
