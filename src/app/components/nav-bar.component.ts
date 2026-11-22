@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
       <div>
         <a class="brand" href="#accueil" aria-label="Accueil du portfolio">HC</a>
         <ul class="nav-list">
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <a href="projects">Projets</a>
+          <a href="skills">Compétences</a>
+          <a href="contactme">Me contacter</a>
         </ul>
       </div>
     </nav>
@@ -22,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
       z-index: 100;
       display: block;
       width: 100%;
-      background: #FFFFF2;
+      background: #fffff2;
       border-bottom: 1px solid #508484;
     }
 
@@ -38,11 +37,11 @@ import { Component, OnInit } from '@angular/core';
       margin: 0 auto;
       padding: 0 24px;
       align-items: center;
-      color: #01161E;
+      color: #01161e;
     }
 
     .brand {
-      color: #01161E;
+      color: #01161e;
       font-size: 1.15rem;
       font-weight: 850;
       letter-spacing: -0.06em;
