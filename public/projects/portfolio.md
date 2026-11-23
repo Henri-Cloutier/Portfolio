@@ -2,20 +2,16 @@
 
 ## Présentation
 
-Le but de faire ce logiciel était de démontrer mes compétences dans les différents domaines que j'ai eu la chance de côtoyer pendant mon parcours. Ceci inclue de faire un logiciel avec Angular, de démontrer ma capacité à mettre en service une variété de service, c'est-à-dire celui du portfolio, le Calendrier Prévisionnel ou encore le Logiciel de Gestion d'inventaire.
+Le but de ce logiciel était de démontrer mes compétences dans les différents domaines que j'ai eu la chance d'explorer au cours de mon parcours. Cela comprenait notamment la création d'une application avec Angular et la démonstration de ma capacité à mettre en service plusieurs projets : le portfolio, le Calendrier prévisionnel et le logiciel de gestion d'inventaire.
 
-###
+D'autres aspects, moins visibles, ont aussi demandé un apprentissage, même pour ce court projet, notamment la configuration d'un réseau permettant d'exposer chacun de mes services en toute sécurité aux autres appareils de mon réseau.
 
-D'autres parties moins visibles ont nécessité de l'apprentissage pour ce court projet, entre autre la configuration d'un réseau pour exposer chacun de mes services en toute sécurité pour les autres appareils sur mon réseau.
-
-###
-
-En résumé, je souhaitais faire un court projet qui passait rapidement sur chacune des compétences que j'ai pu développer pendant mon parcours jusqu'ici.
+En résumé, je souhaitais réaliser un projet court qui présenterait chacune des compétences que j'ai développées au cours de mon parcours jusqu'à présent.
 
 ## Fonctionnalités
 
-- Conversion d'un fichier .md à une page web.
-- Liens vers des démos des projets présentés.
+- Conversion d'un fichier Markdown en page Web.
+- Liens vers des démonstrations des projets présentés.
 
 ## Technologies
 
@@ -23,6 +19,6 @@ En résumé, je souhaitais faire un court projet qui passait rapidement sur chac
 
 Angular
 
-### Version Control
+### Contrôle de version
 
-Git ([Lien vers le repository](https://github.com/Henri-Cloutier/Portfolio))
+Git ([Lien vers le dépôt](https://github.com/Henri-Cloutier/Portfolio))

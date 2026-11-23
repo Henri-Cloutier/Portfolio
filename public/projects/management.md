@@ -6,18 +6,16 @@ Ce logiciel avait pour but d'offrir à l'équipe administrative de l'Approvision
 
 ## Contexte
 
-Ce logiciel a été développé en parallèlle du [Calendrier prévisionnel](/projects/calendar) pendant une période plus lente. Le but de ce logiciel était d'offrir une interface où chacun des employés pouvaient réserver leur bureau au jour qu'ils souhaitent aller au bureau. Ce logiciel était devenu une nécessité suite à un changement de politique qui faisait à ce que tous les employés devaient dorénavant rentrer 3 jours par semaine au lieu de 2.
+Ce logiciel a été développé en parallèle du [Calendrier prévisionnel](/projects/calendar) pendant une période moins chargée. Il visait à offrir une interface où chaque employé pouvait réserver son bureau pour les jours où il souhaitait se rendre au bureau. Il était devenu nécessaire à la suite d'un changement de politique selon lequel les employés devaient désormais venir au bureau trois jours par semaine au lieu de deux.
 
-###
-
-Il m'a donc été demandé de créer un logiciel simple règlant ce problème, ce que j'ai pu fournir en quelques jours. Par la suite, d'autres ajouts ont été demandés, tel que la simulation d'un horaire de bureau dans des situations plus atypiques.
+Il m'a donc été demandé de créer un logiciel simple pour résoudre ce problème, ce que j'ai pu faire en quelques jours. Par la suite, d'autres ajouts ont été demandés, tels que la simulation d'un horaire de travail dans des situations plus atypiques.
 
 ## Fonctionnalités
 
-Le logiciel a donc 2 fonctionnalités principales:
+Le logiciel a donc deux fonctionnalités principales :
 
-- Les employés peuvent réserver un bureau aux jours de la semaine qu'ils souhaitent et les chefs de division peuvent modifier ces choix ou réserver pour leur équipe
-- Les chefs de division peuvent générer des horaires en fonction de paramètres spécifiques, par exemple est-ce que le chef de division est présent ce jour-là, la quantité de gens dans la division, la priorité que chacun a associé aux journées de la semaine, etc.
+- Les employés peuvent réserver un bureau les jours de la semaine de leur choix. Les chefs de division peuvent modifier ces choix ou réserver des bureaux pour leur équipe.
+- Les chefs de division peuvent générer des horaires selon des paramètres précis, par exemple la présence du chef ce jour-là, le nombre de personnes dans la division et les priorités associées par chacun aux jours de la semaine.
 
 ## Technologies
 

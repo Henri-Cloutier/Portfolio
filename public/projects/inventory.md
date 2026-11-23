@@ -2,28 +2,26 @@
 
 ## Présentation
 
-Le but de ce logiciel était, à la base, pour avoir un logiciel que je pouvais utiliser pour me familiariser avec l'infrastructure de mon club en le mettant en service moi-même. Étant donné que le département d'inventaire du club souhaitait s'éloigner des fichiers excel pour le maintien de l'inventaire, c'était une opportunité parfaite pour me familiariser avec un nouveau framework ainsi que la création de configurations pour l'infrastrcuture des clubs configurée avec ArgoCD.
+Le but initial de ce logiciel était de créer un outil que je pourrais mettre moi-même en service afin de me familiariser avec l'infrastructure de mon club. Comme le département d'inventaire souhaitait délaisser les fichiers Excel pour gérer son inventaire, c'était l'occasion idéale de découvrir un nouveau framework et de créer des configurations pour l'infrastructure du club, gérée avec Argo CD.
 
 ## Contexte
 
-Pour un petit peu plus de contexte, je venais tout juste d'obtenir le rôle de gestionnaire de l'infrastructure dans notre relation avec le club Cédille, et j'avais très peu d'expérience avec Kubernetes, Ansible et ArgoCD, qui sont les 3 plus grands composants de l'infrastructure des clubs.
+Pour donner un peu plus de contexte, je venais tout juste d'obtenir le rôle de gestionnaire de l'infrastructure dans le cadre de notre partenariat avec le club Cédille. J'avais alors très peu d'expérience avec Kubernetes, Ansible et Argo CD, les trois principaux composants de l'infrastructure des clubs.
 
 ### Configuration des serveurs des clubs
 
-Nous avons 8 serveurs, tous dans un cluster Proxmox.
-Chacun de ces serveurs fait aussi partie du cluster Kubernetes, qui peut prendre autant de ressources que celui-ci demande.
-Kubernetes, quant à lui, est configuré avec ArgoCD, qui a pour but de faire à ce que nos repos Git sont la seule source de vérité.
-ArgoCD a plusieurs repositories qu'il vérifie pour des changements de configuration. Si une d'entre elle est modifiée, le tout sera automatiquement déployé, et en cas de problème, les membres de Cédille seront avisés immédiatement.
+Nous avons huit serveurs, tous dans un cluster Proxmox.
+Chacun de ces serveurs fait aussi partie du cluster Kubernetes, qui peut utiliser autant de ressources que nécessaire.
+Kubernetes, quant à lui, est configuré avec Argo CD, qui vise à faire de nos dépôts Git la seule source de vérité.
+Argo CD surveille plusieurs dépôts pour détecter les changements de configuration. Si l'un d'eux est modifié, les changements sont déployés automatiquement et, en cas de problème, les membres de Cédille en sont avisés immédiatement.
 
-###
-
-Dans mon contexte, mes tâches sont de faire les configurations pour les applications du Lan ETS, de m'assurer que le tout fonctionne correctement et de créer les machines virtuelles que l'on me demande sur le cluster Proxmox, qui permet tout de même de créer des VMs avec ses ressources restantes.
+Dans mon rôle, mes tâches consistent à configurer les applications du LAN ETS, à m'assurer que tout fonctionne correctement et à créer les machines virtuelles demandées sur le cluster Proxmox, qui permet aussi d'en créer avec les ressources restantes.
 
 ## Fonctionnalités
 
-- Gestion des emplacements d'inventaire et des items en inventaire
-- Demande de matériel de gens faisant partie du club (accès directe aux données d'inventaires), ou de gens externes au club (formulaire n'affichant pas le contenu exacte de l'inventaire)
-- Statistique sur l'état de l'inventaire (Demandes en attente, prêts arrivant à échéance, achats nécessaires)
+- Gestion des emplacements et des articles de l'inventaire
+- Demandes de matériel par les membres du club (accès direct aux données de l'inventaire) ou par des personnes externes (formulaire ne révélant pas le contenu exact de l'inventaire)
+- Statistiques sur l'état de l'inventaire (demandes en attente, prêts arrivant à échéance, achats nécessaires)
 
 ## Technologies
 
@@ -33,7 +31,7 @@ Angular
 
 ### Backend
 
-Node.ts
+Node.js (TypeScript)
 
 ### Base de données
 
