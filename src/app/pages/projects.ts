@@ -4,6 +4,11 @@ import { marked } from 'marked';
 
 export const projects = [
   {
+    slug: 'inventory',
+    title: "Gestion d'inventaire",
+    markdownFile: 'inventory.md',
+  },
+  {
     slug: 'calendar',
     title: 'Calendrier prévisionnel',
     markdownFile: 'calendar.md',
