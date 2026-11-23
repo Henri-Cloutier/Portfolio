@@ -6,7 +6,7 @@ Ce logiciel avait pour but d'offrir à l'équipe administrative de l'Approvision
 
 ## Contexte
 
-Ce logiciel a été développé en parallèlle du <a href="projects/calendar">Calendrier Prévisionnel</a> pendant une période plus lente. Le but de ce logiciel était d'offrir une interface où chacun des employés pouvaient réserver leur bureau au jour qu'ils souhaitent aller au bureau. Ce logiciel était devenu une nécessité suite à un changement de politique qui faisait à ce que tous les employés devaient dorénavant rentrer 3 jours par semaine au lieu de 2.
+Ce logiciel a été développé en parallèlle du [Calendrier prévisionnel](/projects/calendar) pendant une période plus lente. Le but de ce logiciel était d'offrir une interface où chacun des employés pouvaient réserver leur bureau au jour qu'ils souhaitent aller au bureau. Ce logiciel était devenu une nécessité suite à un changement de politique qui faisait à ce que tous les employés devaient dorénavant rentrer 3 jours par semaine au lieu de 2.
 
 ###
 
