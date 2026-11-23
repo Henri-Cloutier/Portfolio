@@ -47,6 +47,8 @@ Depuis le dossier parent contenant le fichier `docker-compose.yml` :
 docker compose up --build
 ```
 
+Angular tourne dans le conteneur. Le dossier `public/projects` est monté dans le conteneur et surveillé : les modifications aux fichiers Markdown sont prises en compte sans lancer npm sur la machine hôte.
+
 ## Structure du projet
 
 ```text

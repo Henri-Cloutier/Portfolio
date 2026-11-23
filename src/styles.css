@@ -16,3 +16,63 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.markdown-content {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #01161e;
+  line-height: 1.75;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #01161e;
+  line-height: 1.2;
+}
+
+.markdown-content h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.055em;
+}
+
+.markdown-content h2 {
+  margin: 40px 0 12px;
+  font-size: 1.75rem;
+}
+
+.markdown-content h3 {
+  margin: 28px 0 8px;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.markdown-content ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.markdown-content li {
+  padding-left: 0.25rem;
+}
+
+.markdown-content li::marker {
+  color: #508484;
+}
+
+.markdown-content li + li {
+  margin-top: 0.4rem;
+}
+
+.markdown-content a {
+  color: #356b6b;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
