@@ -94,6 +94,7 @@ import { Component } from '@angular/core';
     .contact-card {
       flex: 1 1 300px;
       min-height: 220px;
+      min-width: fit-content;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
