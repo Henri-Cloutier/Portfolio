@@ -39,6 +39,10 @@ npm test        # Exécute les tests
 npm run watch   # Compile en continu
 ```
 
+## Intégration continue
+
+Le workflow GitHub Actions exécute le lint, les tests et le build de production sur un runner auto-hébergé pour chaque pull request et chaque push. Il utilise Node.js 24 et le label standard `self-hosted`.
+
 ## Lancement avec Docker
 
 Depuis le dossier parent contenant le fichier `docker-compose.yml` :
