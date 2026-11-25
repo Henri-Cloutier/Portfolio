@@ -7,33 +7,44 @@ import { Component } from '@angular/core';
       <section class="hero" id="accueil">
         <div class="hero-copy">
           <p class="eyebrow">Portfolio</p>
-          <h1>Bonjour, je suis <span>Henri Cloutier</span>.</h1>
-          <p class="intro">
+          <h1>
+            <span i18n="@@homeGreeting">Bonjour, je suis</span>
+            <span>Henri Cloutier</span>.
+          </h1>
+          <p class="intro" i18n="@@homeIntro">
             Développeur passionné, je conçois des applications modernes, fiables et pensées pour
             offrir une excellente expérience utilisateur.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projets">Voir mes projets</a>
-            <a class="button button-secondary" href="#contact">Me contacter</a>
+            <a class="button button-primary" href="#projets" i18n="@@homeProjects">
+              Voir mes projets
+            </a>
+            <a class="button button-secondary" href="#contact" i18n="@@homeContact">
+              Me contacter
+            </a>
           </div>
         </div>
       </section>
 
       <section class="section" id="apropos">
-        <p class="eyebrow">À propos</p>
-        <h2>Créer des solutions utiles et élégantes</h2>
-        <p class="section-copy">
+        <p class="eyebrow" i18n="@@homeAboutEyebrow">À propos</p>
+        <h2 i18n="@@homeAboutTitle">Créer des solutions utiles et élégantes</h2>
+        <p class="section-copy" i18n="@@homeAboutText">
           Ce portfolio présente mon parcours, mes compétences et les projets auxquels j'ai
           participé. J'éprouve un réel plaisir à faire de mes idées une réalité.
         </p>
       </section>
 
       <section class="contact" id="contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Travaillons ensemble</h2>
-        <p>Vous avez un projet ou une opportunité à me proposer?</p>
+        <p class="eyebrow" i18n="@@homeContactEyebrow">Contact</p>
+        <h2 i18n="@@homeContactTitle">Travaillons ensemble</h2>
+        <p i18n="@@homeContactText">Vous avez un projet ou une opportunité à me proposer?</p>
         <div class="contactOptions">
-          <a class="button button-primary" href="mailto:henri.cloutier@outlook.com">
+          <a
+            class="button button-primary"
+            href="mailto:henri.cloutier@outlook.com"
+            i18n="@@homeEmail"
+          >
             Envoyer un courriel
           </a>
           <a
@@ -41,7 +52,7 @@ import { Component } from '@angular/core';
             href="https://www.linkedin.com/in/henri-cloutier-85136b2a3/"
             target="_blank"
           >
-            Profil LinkedIn
+            <span i18n="@@homeLinkedin">Profil LinkedIn</span>
           </a>
         </div>
       </section>

@@ -5,25 +5,29 @@ import { Component } from '@angular/core';
   template: `
     <main>
       <header class="page-header">
-        <p class="eyebrow">Contact</p>
-        <h1>Me contacter</h1>
-        <p>
+        <p class="eyebrow" i18n="@@contactEyebrow">Contact</p>
+        <h1 i18n="@@contactTitle">Me contacter</h1>
+        <p i18n="@@contactDescription">
           Une question, une opportunité ou un projet à discuter? Choisissez le moyen de
           communication qui vous convient.
         </p>
       </header>
 
-      <section class="contact-grid" aria-label="Options de contact">
+      <section
+        class="contact-grid"
+        aria-label="Options de contact"
+        i18n-aria-label="@@contactAriaLabel"
+      >
         <a class="contact-card" href="mailto:henri.cloutier@outlook.com">
-          <span class="contact-label">Courriel</span>
+          <span class="contact-label" i18n="@@contactEmailLabel">Courriel</span>
           <strong>henri.cloutier@outlook.com</strong>
-          <span class="contact-action">Envoyer un courriel</span>
+          <span class="contact-action" i18n="@@contactEmailAction">Envoyer un courriel</span>
         </a>
 
         <a class="contact-card" href="tel:+15551234567">
-          <span class="contact-label">Téléphone</span>
+          <span class="contact-label" i18n="@@contactPhoneLabel">Téléphone</span>
           <strong>+1 (438) 408-4568</strong>
-          <span class="contact-action">Appeler</span>
+          <span class="contact-action" i18n="@@contactPhoneAction">Appeler</span>
         </a>
 
         <a
@@ -31,9 +35,9 @@ import { Component } from '@angular/core';
           href="https://www.linkedin.com/in/henri-cloutier-85136b2a3/"
           target="_blank"
         >
-          <span class="contact-label">LinkedIn</span>
+          <span class="contact-label" i18n="@@contactLinkedinLabel">LinkedIn</span>
           <strong>Henri Cloutier</strong>
-          <span class="contact-action">Voir le profil</span>
+          <span class="contact-action" i18n="@@contactLinkedinAction">Voir le profil</span>
         </a>
       </section>
     </main>

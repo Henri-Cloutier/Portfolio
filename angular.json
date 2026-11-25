@@ -10,7 +10,16 @@
     "portfolio": {
       "projectType": "application",
       "i18n": {
-        "sourceLocale": "en-US"
+        "sourceLocale": {
+          "code": "fr",
+          "subPath": ""
+        },
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "subPath": "en"
+          }
+        }
       },
       "schematics": {},
       "root": "",
@@ -29,7 +38,8 @@
               }
             ],
             "styles": ["src/styles.css"],
-            "polyfills": ["@angular/localize/init"]
+            "polyfills": ["@angular/localize/init"],
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -48,6 +58,13 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": ["fr"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "development-en": {
+              "localize": ["en"],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
@@ -63,6 +80,9 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
+            },
+            "english": {
+              "buildTarget": "portfolio:build:development-en"
             }
           },
           "defaultConfiguration": "development"

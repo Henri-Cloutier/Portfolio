@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { projects } from '../pages/projects';
 
@@ -8,18 +9,50 @@ import { projects } from '../pages/projects';
   template: `
     <nav>
       <div>
-        <a class="brand" routerLink="/home" aria-label="Accueil du portfolio">HC</a>
+        <a
+          class="brand"
+          routerLink="/home"
+          aria-label="Accueil du portfolio"
+          i18n-aria-label="@@navHome"
+        >
+          HC
+        </a>
         <ul class="nav-list">
           <li class="nav-dropdown">
-            <a routerLink="/projects" aria-haspopup="true" aria-controls="projects-menu">Projets</a>
+            <a
+              routerLink="/projects"
+              aria-haspopup="true"
+              aria-controls="projects-menu"
+              i18n="@@navProjects"
+            >
+              Projets
+            </a>
             <ul id="projects-menu" class="dropdown-list">
               @for (project of projects; track project.slug) {
-                <li><a [routerLink]="['/projects', project.slug]">{{ project.title }}</a></li>
+                <li>
+                  <a [routerLink]="['/projects', project.slug]">
+                    {{ project.title }}
+                  </a>
+                </li>
               }
             </ul>
           </li>
-          <li><a routerLink="/skills">Compétences</a></li>
-          <li><a routerLink="/contact-me">Me contacter</a></li>
+          <li><a routerLink="/skills" i18n="@@navSkills">Compétences</a></li>
+          <li><a routerLink="/contact-me" i18n="@@navContact">Me contacter</a></li>
+          <li
+            class="language-switch"
+            role="group"
+            aria-label="Changer de langue"
+            i18n-aria-label="@@navChangeLanguage"
+          >
+            @if (isEnglish) {
+              <a [href]="localeUrl('fr')">FR</a>
+              <span aria-current="page">EN</span>
+            } @else {
+              <span aria-current="page">FR</span>
+              <a [href]="localeUrl('en')">EN</a>
+            }
+          </li>
         </ul>
       </div>
     </nav>
@@ -78,6 +111,32 @@ import { projects } from '../pages/projects';
       cursor: pointer;
     }
 
+    .language-switch {
+      display: flex;
+      gap: 2px;
+      margin-left: 8px;
+    }
+
+    .language-switch a,
+    .language-switch span {
+      display: block;
+      border-radius: 999px;
+      padding: 8px 10px;
+      color: #01161e;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+
+    .language-switch a {
+      cursor: pointer;
+    }
+
+    .language-switch a:hover,
+    .language-switch span[aria-current='page'] {
+      background: #508484;
+      color: #fffff2;
+    }
+
     .nav-list a:hover {
       background: #508484;
       color: #fffff2;
@@ -132,4 +191,17 @@ import { projects } from '../pages/projects';
 })
 export class HomeComponent {
   protected readonly projects = projects;
+  private readonly document = inject(DOCUMENT);
+  protected readonly isEnglish = this.document.documentElement.lang.startsWith('en');
+
+  protected localeUrl(locale: 'en' | 'fr'): string {
+    const pathname = this.document.defaultView?.location.pathname ?? '/';
+    const path = pathname.startsWith('/en/')
+      ? pathname.slice(3)
+      : pathname === '/en'
+        ? '/'
+        : pathname;
+
+    return locale === 'en' ? `/en${path === '/' ? '/' : path}` : path;
+  }
 }
