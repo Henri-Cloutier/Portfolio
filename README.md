@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-L'application est ensuite disponible à l'adresse <http://localhost:4200>.
+L'application est ensuite disponible en français à l'adresse <http://localhost:4200>. Pour la servir en anglais pendant le développement, utilisez `ng serve --configuration english`.
 
 ## Commandes disponibles
 
@@ -61,6 +61,10 @@ src/
   public/    # Ressources publiques
   styles.css # Styles globaux
 ```
+
+## Langues
+
+L'interface utilise l'i18n intégré à Angular. Le build de production génère la version française à la racine et la version anglaise sous `/en/`; les boutons FR/EN de la barre de navigation changent de version en conservant la page courante. Les détails des projets utilisent `public/projects/<slug>.md` pour le français et `public/projects/<slug>.en.md` pour l'anglais. Les traductions de l'interface anglaise sont dans `src/locale/messages.en.xlf`.
 
 ## Auteur
 

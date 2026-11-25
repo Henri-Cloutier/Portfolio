@@ -5,17 +5,21 @@ import { Component } from '@angular/core';
   template: `
     <main>
       <header class="page-header">
-        <p class="eyebrow">Profil technique</p>
-        <h1>Mes compétences</h1>
-        <p>
-          Voici les technologies, outils ou logiciels que j'ai été porté à utiliser dans le cadre de
-          mon parcours.
+        <p class="eyebrow" i18n="@@skillsEyebrow">Profil technique</p>
+        <h1 i18n="@@skillsTitle">Mes compétences</h1>
+        <p i18n="@@skillsDescription">
+          Voici les technologies, outils ou logiciels que j'ai été porté à utiliser dans le cadre
+          de mon parcours.
         </p>
       </header>
 
-      <section class="skill-grid" aria-label="Liste des compétences">
+      <section
+        class="skill-grid"
+        aria-label="Liste des compétences"
+        i18n-aria-label="@@skillsAriaLabel"
+      >
         <article class="skill-card">
-          <h2>Langages</h2>
+          <h2 i18n="@@skillsLanguages">Langages</h2>
           <ul>
             <li>C</li>
             <li>C#</li>
@@ -31,7 +35,7 @@ import { Component } from '@angular/core';
         </article>
 
         <article class="skill-card">
-          <h2>Infrastructure</h2>
+          <h2 i18n="@@skillsInfrastructure">Infrastructures</h2>
           <ul>
             <li>ASP.NET</li>
             <li>Node.js</li>
@@ -42,7 +46,7 @@ import { Component } from '@angular/core';
         </article>
 
         <article class="skill-card">
-          <h2>Services</h2>
+          <h2 i18n="@@skillsServices">Services</h2>
           <ul>
             <li>Kubernetes</li>
             <li>Docker</li>
@@ -53,7 +57,7 @@ import { Component } from '@angular/core';
         </article>
 
         <article class="skill-card">
-          <h2>Logiciels</h2>
+          <h2 i18n="@@skillsSoftware">Logiciels</h2>
           <ul>
             <li>Word</li>
             <li>Excel</li>
@@ -66,7 +70,7 @@ import { Component } from '@angular/core';
           </ul>
         </article>
         <article class="skill-card">
-          <h2>Systèmes d'exploitations</h2>
+          <h2 i18n="@@skillsOperatingSystems">Systèmes d'exploitation</h2>
           <ul>
             <li>Windows 10</li>
             <li>Windows 11</li>

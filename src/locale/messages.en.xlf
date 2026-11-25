@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="navHome">
+        <source>Accueil du portfolio</source>
+        <target>Portfolio home</target>
+      </trans-unit>
+      <trans-unit id="navProjects">
+        <source>Projets</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="navSkills">
+        <source>Compétences</source>
+        <target>Skills</target>
+      </trans-unit>
+      <trans-unit id="navContact">
+        <source>Me contacter</source>
+        <target>Contact me</target>
+      </trans-unit>
+      <trans-unit id="navChangeLanguage">
+        <source>Changer de langue</source>
+        <target>Change language</target>
+      </trans-unit>
+      <trans-unit id="projectInventory">
+        <source>Gestion d'inventaire</source>
+        <target>Inventory management</target>
+      </trans-unit>
+      <trans-unit id="projectCalendar">
+        <source>Calendrier prévisionnel</source>
+        <target>Procurement calendar</target>
+      </trans-unit>
+      <trans-unit id="projectManagement">
+        <source>Gestion de personnel</source>
+        <target>Staff management</target>
+      </trans-unit>
+      <trans-unit id="projectPortfolio">
+        <source>Portfolio</source>
+        <target>Portfolio</target>
+      </trans-unit>
+      <trans-unit id="projectsEyebrow">
+        <source>Portfolio</source>
+        <target>Portfolio</target>
+      </trans-unit>
+      <trans-unit id="projectsTitle">
+        <source>Mes projets</source>
+        <target>My projects</target>
+      </trans-unit>
+      <trans-unit id="projectsDescription">
+        <source>Parcourez mes projets et ouvrez leur page pour en découvrir les détails.</source>
+        <target>Browse my projects and open a page to learn more about each one.</target>
+      </trans-unit>
+      <trans-unit id="projectsAriaLabel">
+        <source>Tous les projets</source>
+        <target>All projects</target>
+      </trans-unit>
+      <trans-unit id="projectsProjectLabel">
+        <source>Projet</source>
+        <target>Project</target>
+      </trans-unit>
+      <trans-unit id="projectsOpen">
+        <source>Voir le projet</source>
+        <target>View project</target>
+      </trans-unit>
+      <trans-unit id="projectLoading">
+        <source>Chargement du projet...</source>
+        <target>Loading project...</target>
+      </trans-unit>
+      <trans-unit id="projectLoadError">
+        <source>Le contenu de ce projet n’a pas pu être chargé.</source>
+        <target>This project content could not be loaded.</target>
+      </trans-unit>
+      <trans-unit id="homeGreeting">
+        <source>Bonjour, je suis</source>
+        <target>Hello, I am</target>
+      </trans-unit>
+      <trans-unit id="homeIntro">
+        <source>Développeur passionné, je conçois des applications modernes, fiables et pensées pour offrir une excellente expérience utilisateur.</source>
+        <target>As a passionate developer, I build modern, reliable applications designed to offer an excellent user experience.</target>
+      </trans-unit>
+      <trans-unit id="homeProjects">
+        <source>Voir mes projets</source>
+        <target>View my projects</target>
+      </trans-unit>
+      <trans-unit id="homeContact">
+        <source>Me contacter</source>
+        <target>Contact me</target>
+      </trans-unit>
+      <trans-unit id="homeAboutEyebrow">
+        <source>À propos</source>
+        <target>About</target>
+      </trans-unit>
+      <trans-unit id="homeAboutTitle">
+        <source>Créer des solutions utiles et élégantes</source>
+        <target>Building useful and elegant solutions</target>
+      </trans-unit>
+      <trans-unit id="homeAboutText">
+        <source>Ce portfolio présente mon parcours, mes compétences et les projets auxquels j'ai participé. J'éprouve un réel plaisir à faire de mes idées une réalité.</source>
+        <target>This portfolio presents my background, skills, and the projects I've contributed to. I truly enjoy turning ideas into reality.</target>
+      </trans-unit>
+      <trans-unit id="homeContactEyebrow">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="homeContactTitle">
+        <source>Travaillons ensemble</source>
+        <target>Let's work together</target>
+      </trans-unit>
+      <trans-unit id="homeContactText">
+        <source>Vous avez un projet ou une opportunité à me proposer?</source>
+        <target>Do you have a project or opportunity to discuss?</target>
+      </trans-unit>
+      <trans-unit id="homeEmail">
+        <source>Envoyer un courriel</source>
+        <target>Send an email</target>
+      </trans-unit>
+      <trans-unit id="homeLinkedin">
+        <source>Profil LinkedIn</source>
+        <target>LinkedIn profile</target>
+      </trans-unit>
+      <trans-unit id="skillsEyebrow">
+        <source>Profil technique</source>
+        <target>Technical profile</target>
+      </trans-unit>
+      <trans-unit id="skillsTitle">
+        <source>Mes compétences</source>
+        <target>My skills</target>
+      </trans-unit>
+      <trans-unit id="skillsDescription">
+        <source>Voici les technologies, outils ou logiciels que j'ai été porté à utiliser dans le cadre de mon parcours.</source>
+        <target>Here are the technologies, tools, and software I have had the opportunity to use throughout my career.</target>
+      </trans-unit>
+      <trans-unit id="skillsAriaLabel">
+        <source>Liste des compétences</source>
+        <target>List of skills</target>
+      </trans-unit>
+      <trans-unit id="skillsLanguages">
+        <source>Langages</source>
+        <target>Languages</target>
+      </trans-unit>
+      <trans-unit id="skillsInfrastructure">
+        <source>Infrastructures</source>
+        <target>Infrastructure</target>
+      </trans-unit>
+      <trans-unit id="skillsServices">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="skillsSoftware">
+        <source>Logiciels</source>
+        <target>Software</target>
+      </trans-unit>
+      <trans-unit id="skillsOperatingSystems">
+        <source>Systèmes d'exploitation</source>
+        <target>Operating systems</target>
+      </trans-unit>
+      <trans-unit id="contactEyebrow">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="contactTitle">
+        <source>Me contacter</source>
+        <target>Get in touch</target>
+      </trans-unit>
+      <trans-unit id="contactDescription">
+        <source>Une question, une opportunité ou un projet à discuter? Choisissez le moyen de communication qui vous convient.</source>
+        <target>Have a question, an opportunity, or a project to discuss? Choose whichever communication method works best for you.</target>
+      </trans-unit>
+      <trans-unit id="contactAriaLabel">
+        <source>Options de contact</source>
+        <target>Contact options</target>
+      </trans-unit>
+      <trans-unit id="contactEmailLabel">
+        <source>Courriel</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="contactEmailAction">
+        <source>Envoyer un courriel</source>
+        <target>Send an email</target>
+      </trans-unit>
+      <trans-unit id="contactPhoneLabel">
+        <source>Téléphone</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="contactPhoneAction">
+        <source>Appeler</source>
+        <target>Call</target>
+      </trans-unit>
+      <trans-unit id="contactLinkedinLabel">
+        <source>LinkedIn</source>
+        <target>LinkedIn</target>
+      </trans-unit>
+      <trans-unit id="contactLinkedinAction">
+        <source>Voir le profil</source>
+        <target>View profile</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

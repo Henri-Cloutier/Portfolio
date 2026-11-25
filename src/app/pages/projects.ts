@@ -5,22 +5,22 @@ import { marked } from 'marked';
 export const projects = [
   {
     slug: 'inventory',
-    title: "Gestion d'inventaire",
+    title: $localize`:@@projectInventory:Gestion d'inventaire`,
     markdownFile: 'inventory.md',
   },
   {
     slug: 'calendar',
-    title: 'Calendrier prévisionnel',
+    title: $localize`:@@projectCalendar:Calendrier prévisionnel`,
     markdownFile: 'calendar.md',
   },
   {
     slug: 'management',
-    title: 'Gestion de personnel',
+    title: $localize`:@@projectManagement:Gestion de personnel`,
     markdownFile: 'management.md',
   },
   {
     slug: 'portfolio',
-    title: 'Portfolio',
+    title: $localize`:@@projectPortfolio:Portfolio`,
     markdownFile: 'portfolio.md',
   },
 ] as const;
@@ -31,17 +31,26 @@ export const projects = [
   template: `
     <main>
       <header class="page-header">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Mes projets</h1>
-        <p>Parcourez mes projets et ouvrez leur page pour en découvrir les détails.</p>
+        <p class="eyebrow" i18n="@@projectsEyebrow">Portfolio</p>
+        <h1 i18n="@@projectsTitle">Mes projets</h1>
+        <p i18n="@@projectsDescription">
+          Parcourez mes projets et ouvrez leur page pour en découvrir les détails.
+        </p>
       </header>
 
-      <section class="project-grid" aria-label="Tous les projets">
+      <section
+        class="project-grid"
+        aria-label="Tous les projets"
+        i18n-aria-label="@@projectsAriaLabel"
+      >
         @for (project of projects; track project.slug) {
           <a class="project-card" [routerLink]="['/projects', project.slug]">
-            <span class="project-label">Projet</span>
+            <span class="project-label" i18n="@@projectsProjectLabel">Projet</span>
             <h2>{{ project.title }}</h2>
-            <span class="project-action">Voir le projet <span aria-hidden="true">→</span></span>
+            <span class="project-action">
+              <span i18n="@@projectsOpen">Voir le projet</span>
+              <span aria-hidden="true">→</span>
+            </span>
           </a>
         }
       </section>
@@ -145,7 +154,7 @@ export class ProjectsPage {
   template: `
     <main>
       @if (loading()) {
-        <p role="status">Chargement du projet...</p>
+        <p role="status" i18n="@@projectLoading">Chargement du projet...</p>
       } @else if (loadError()) {
         <p class="load-error" role="alert">{{ loadError() }}</p>
       } @else {
@@ -176,10 +185,15 @@ export class ProjectPage {
   }
 
   private async loadMarkdown(): Promise<void> {
-    const markdownFile = this.route.snapshot.data['markdownFile'];
+    const defaultMarkdownFile: unknown = this.route.snapshot.data['markdownFile'];
+    const markdownFile =
+      typeof defaultMarkdownFile === 'string' &&
+      document.documentElement.lang.toLowerCase().startsWith('en')
+        ? defaultMarkdownFile.replace(/\.md$/, '.en.md')
+        : defaultMarkdownFile;
 
     try {
-      if (typeof markdownFile !== 'string' || !/^[a-z0-9-]+\.md$/.test(markdownFile)) {
+      if (typeof markdownFile !== 'string' || !/^[a-z0-9-]+(?:\.en)?\.md$/.test(markdownFile)) {
         throw new Error('Project route is missing a valid Markdown filename.');
       }
 
@@ -189,10 +203,13 @@ export class ProjectPage {
         throw new Error(`Markdown request failed with status ${response.status}.`);
       }
 
-      this.html.set(await marked.parse(await response.text()));
+      const markdown = await response.text();
+      this.html.set(await marked.parse(markdown));
     } catch (error) {
       console.error(`Unable to load project Markdown file "${markdownFile}".`, error);
-      this.loadError.set('Le contenu de ce projet n’a pas pu être chargé.');
+      this.loadError.set(
+        $localize`:@@projectLoadError:Le contenu de ce projet n’a pas pu être chargé.`,
+      );
     } finally {
       this.loading.set(false);
     }
