@@ -16,10 +16,10 @@ import { Component } from '@angular/core';
             offrir une excellente expérience utilisateur.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projets" i18n="@@homeProjects">
+            <a class="button button-primary" href="projects" i18n="@@homeProjects">
               Voir mes projets
             </a>
-            <a class="button button-secondary" href="#contact" i18n="@@homeContact">
+            <a class="button button-secondary" href="contact-me" i18n="@@homeContact">
               Me contacter
             </a>
           </div>
