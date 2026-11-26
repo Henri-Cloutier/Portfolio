@@ -71,8 +71,8 @@
         <target>This project content could not be loaded.</target>
       </trans-unit>
       <trans-unit id="homeGreeting">
-        <source>Bonjour, je suis</source>
-        <target>Hello, I am</target>
+        <source>Bonjour, je suis </source>
+        <target>Hello, I am </target>
       </trans-unit>
       <trans-unit id="homeIntro">
         <source>Développeur passionné, je conçois des applications modernes, fiables et pensées pour offrir une excellente expérience utilisateur.</source>

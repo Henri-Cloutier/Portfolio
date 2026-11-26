@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         <div class="hero-copy">
           <p class="eyebrow">Portfolio</p>
           <h1>
-            <span i18n="@@homeGreeting">Bonjour, je suis</span>
+            <span i18n="@@homeGreeting">Bonjour, je suis </span>
             <span>Henri Cloutier</span>.
           </h1>
           <p class="intro" i18n="@@homeIntro">
